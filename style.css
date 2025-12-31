@@ -123,7 +123,7 @@ nav a {
 .hero {
     background: 
         linear-gradient(rgba(10,37,64,0.85), rgba(10,37,64,0.85)),
-        url("images/banner.png");
+        url("banner.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -847,4 +847,5 @@ button {
     height: 90px;
     border-radius: 6px;
   }
+
 }
