@@ -836,7 +836,7 @@ button {
 .event-banner img {
   width: 100%;
   max-width: 1500px;     /* keeps it clean on large screens */
-  height: 250px;         /* SMALL HEIGHT */
+  height: 600px;         /* SMALL HEIGHT */
   object-fit: cover;     /* crops nicely, no stretching */
   border-radius: 8px;
 }
@@ -849,4 +849,5 @@ button {
   }
 
 }
+
 
