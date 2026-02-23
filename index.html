@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PKSTOP | Professional Online Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpeg">
+
+    
+
+    <meta name="description" content="PKSTOP provides professional PF and EPF services including PF withdrawal, transfer, UAN activation and claim assistance.">
+    <meta name="keywords" content="PF services, EPF withdrawal, UAN help, PF transfer, PKSTOP">
+    <meta name="author" content="PKSTOP">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJ2HWQ8FYY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QJ2HWQ8FYY');
+
+    
+</script>
+</script>
+</head>
+
+<!-- Go To Top Button -->
+<button id="goTop" title="Go to top">↑</button>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918169883528" target="_blank" class="float-btn whatsapp" title="WhatsApp">
+    <img src="images/whatsapp-icon.jpeg" alt="WhatsApp" style="width:26px;height:26px;">
+</a>
+
+<!-- Floating Call Button -->
+<a href="tel:+918169883528" class="float-btn call" title="Call Now">
+    📞
+</a>
+
+<script>
+const goTopBtn = document.getElementById("goTop");
+
+// Show button after scrolling
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        goTopBtn.style.display = "block";
+    } else {
+        goTopBtn.style.display = "none";
+    }
+});
+
+// Scroll to top on click
+goTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cards = document.querySelectorAll(".scroll-card");
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    obs.unobserve(entry.target); // animate once
+                }
+            });
+        },
+        {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        }
+    );
+
+    cards.forEach(card => observer.observe(card));
+});
+</script>
+
+<!-- for about page -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const aboutSection = document.querySelector(".about-animate");
+
+    const observer = new IntersectionObserver(
+        function (entries, obs) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    obs.unobserve(entry.target); // animate once
+                }
+            });
+        },
+        {
+            threshold: 0.2
+        }
+    );
+
+    if (aboutSection) {
+        observer.observe(aboutSection);
+    }
+
+});
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const steps = document.querySelectorAll(".pf-step");
+  const bar = document.querySelector(".progress-bar");
+  const success = document.querySelector(".pf-success");
+
+  function animatePF() {
+    steps.forEach(s => s.classList.remove("active"));
+    bar.style.width = "0%";
+    success.style.opacity = "0";
+    success.style.transform = "scale(0.8)";
+
+    steps[0].classList.add("active");
+
+    setTimeout(() => {
+      bar.style.width = "50%";
+    }, 500);
+
+    setTimeout(() => {
+      steps[1].classList.add("active");
+      bar.style.width = "100%";
+    }, 2000);
+
+    setTimeout(() => {
+      success.style.opacity = "1";
+      success.style.transform = "scale(1)";
+    }, 3500);
+  }
+
+  animatePF();
+  setInterval(animatePF, 5000);
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const amountEl = document.getElementById("pfAmount");
+  const statusEl = document.getElementById("pfStatus");
+
+  const targetAmount = 5000000; // change PF amount here
+  const duration = 3000; // speed (ms)
+
+  function startCounter() {
+    let start = 0;
+    let startTime = null;
+
+    statusEl.innerText = "Processing...";
+    statusEl.style.color = "#555";
+
+    function animate(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+
+      const current = Math.floor(progress * targetAmount);
+      amountEl.innerText = current.toLocaleString("en-IN");
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        statusEl.innerText = "✅ Amount Credited Successfully";
+        statusEl.style.color = "#128c7e";
+      }
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  startCounter();
+  setInterval(startCounter, 6000); // loop
+});
+</script>
+
+<!-- Event Banner -->
+
+<script>
+const today = new Date().toISOString().slice(0,10);
+const eventDate = "2026-01-01"; // happy new year
+
+if(today === eventDate){
+  document.querySelector(".event-banner").style.display = "block";
+} else {
+  document.querySelector(".event-banner").style.display = "none";
+}
+</script>
+
+
+
+<script>
+function openWhatsApp(service) {
+    const phone = "918169883528"; // your WhatsApp number
+    const message =
+        "Hello PK STOP,%0A%0A" +
+        "I want to know about *" + service + "* service.%0A" +
+        "Please guide me.";
+
+    window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+}
+</script>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHR9V5PM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ 
+
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <div class="loader-content">
+    <img src="images/logo.jpeg" alt="PKSTOP">
+    <div class="spinner"></div>
+  </div>
+</div>
+
+
+<!-- ================= PRELOADER js================= -->
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hide");
+  });
+</script>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-flex">
+
+    <div class="logo-area">
+      <img src="images/logo.jpeg" alt="PKSTOP Logo">
+      <span>PK STOP</span>
+    </div>
+
+    <nav>
+      <!-- Hamburger -->
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+
+      <!-- Menu -->
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQs</a>
+
+        <div class="contact-menu">
+          <a href="#">Contact ▾</a>
+          <div class="contact-options">
+            <a href="tel:+918169883528">📞 Call Us</a>
+            <a href="https://wa.me/8169883528" target="_blank">💬 WhatsApp</a>
+            <a href="https://www.instagram.com/pkstop0405">📸 Instagram</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</header>
+
+<!--<div class="event-banner">
+  <img src="" alt="Festival Event">
+</div>-->
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container">
+        <h1>Welcome to PK STOP</h1>
+        <p>Your trusted partner for professional online services</p>
+        
+    </div>
+</section>
+
+<section class="trust">
+    <div class="container trust-grid">
+        <div>✔ Secure & Confidential</div>
+        <div>✔ Experienced PF Support</div>
+        <div>✔ Transparent Process</div>
+        <div>✔ Customer Satisfaction</div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container about-animate">
+        <h2>About PK STOP</h2>
+        <p>
+            PK STOP is a trusted service provider specializing in Provident Fund (PF)
+            and EPF-related services for individuals and businesses. We help employees
+            with PF withdrawal, PF transfer, UAN activation, KYC updates, and claim
+            support, ensuring a smooth and hassle-free process. Our goal is to simplify
+            complex PF procedures by providing clear guidance, transparency, and reliable 
+            support, so even non-technical users can easily complete their PF-related tasks. 
+            At PK STOP, we are committed to delivering secure, efficient, and customer-focused
+            PF services with complete professionalism.
+        </p>
+    </div>
+</section>
+
+<section class="pf-animated">
+  <h2>PF Amount Credit in Progress</h2>
+  <br><br>
+
+  <div class="pf-card">
+    <div class="pf-step active">💼 PF Account</div>
+
+    <div class="money-flow">
+      <span>₹</span><span>₹</span><span>₹</span>
+    </div>
+
+    <div class="pf-step">🏦 Bank Account</div>
+
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div class="pf-success">
+      ✅ Amount Credited Successfully
+    </div>
+  </div>
+</section>
+
+<section class="pf-counter-section">
+  <h2>Your PF Amount is Being Credited</h2>
+
+  <div class="pf-counter-card">
+    <div class="pf-label">PF Balance</div>
+
+    <div class="pf-amount">
+      ₹<span id="pfAmount">0</span>
+    </div>
+
+    <div class="pf-status" id="pfStatus">
+      Processing...
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="service-box">
+
+            <div class="service-card" onclick="openWhatsApp('PF Withdrawal Assistance')">
+                <img src="images/pf-withdrawal.jpeg" alt="PF Withdrawal">
+                <div class="service-info">
+                    <h3>PF Withdrawal Assistance</h3>
+                    <p>Online PF withdrawal & claim processing support.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('Fssai Registration')">
+                <img src="images/fssailicense.jpeg" alt="FSSAI Licence">
+                <div class="service-info">
+                    <h3>Fssai Registration</h3>
+                    <p>Registration for Fssai Licence</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('PF Transfer Services')">
+                <img src="images/pf-transfer.jpeg" alt="PF Transfer">
+                <div class="service-info">
+                    <h3>PF Transfer Services</h3>
+                    <p>Transfer PF balance between employers smoothly.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('UAN Activation & KYC Update')">
+                <img src="images/uan-kyc.jpeg" alt="UAN KYC">
+                <div class="service-info">
+                    <h3>UAN Activation & KYC</h3>
+                    <p>Aadhaar, PAN & bank linking support.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('GST Registration')">
+                <img src="images/gst-registration.jpeg" alt="GST">
+                <div class="service-info">
+                    <h3>Gst Registration</h3>
+                    <p>New GST registration & guidance.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('GST Filing')">
+                <img src="images/gst-filing.jpeg" alt="GST Filing">
+                <div class="service-info">
+                    <h3>GST Filing</h3>
+                    <p>Monthly & quarterly GST return filing.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('PAN Card Services')">
+                <img src="images/pan-card.jpeg" alt="PAN Card">
+                <div class="service-info">
+                    <h3>PAN Card Services</h3>
+                    <p>New PAN & correction services.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('Gumasta Certificate')">
+                <img src="images/Gumasta-Certificate.jpeg" alt="Gumasta Certificate">
+                <div class="service-info">
+                    <h3>Gumasta Certificate</h3>
+                    <p>Gumasta License Registration services.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('MSME Certificate')">
+                <img src="images/MSME-Certificate.jpeg" alt="MSME Certificate">
+                <div class="service-info">
+                    <h3>MSME Certificate</h3>
+                    <p>Udyam Registration Certificate services.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('Voter ID Services')">
+                <img src="images/voter-id.jpeg" alt="Voter ID">
+                <div class="service-info">
+                    <h3>Voter ID Services</h3>
+                    <p>New voter ID & update support.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('Copyright, Trademark')">
+                <img src="images/Trademark.jpeg" alt="Trademark">
+                <div class="service-info">
+                    <h3>Copyright, Trademark</h3>
+                    <p>contact for Registered trademark </p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('Driving Licence Services')">
+                <img src="images/driving-licence.jpeg" alt="DL">
+                <div class="service-info">
+                    <h3>Driving Licence</h3>
+                    <p>DL apply, renewal & assistance.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('NOC , Agreement , Deed')">
+                <img src="images/Notary.jpeg" alt="Notary">
+                <div class="service-info">
+                    <h3>NOC , Agreement , Deed</h3>
+                    <p>Contact for Notary services.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('Import Export Certificate(IEC) ')">
+                <img src="images/Import-Export.jpeg" alt="IEC">
+                <div class="service-info">
+                    <h3>Import Export Certificate(IEC)</h3>
+                    <p>Contact for complete IEC services.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="openWhatsApp('Passport Services')">
+                <img src="images/passport.jpeg" alt="Passport">
+                <div class="service-info">
+                    <h3>Passport Services</h3>
+                    <p>Online passport application support.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PRODUCT -->
+<section class="products" id="products">
+    <div class="container">
+        <h2>Our Products</h2>
+
+        <div class="product-box">
+
+            <div class="product-card" onclick="openWhatsApp('Damar Batu')">
+                <img src="images/Damar-Batu.jpeg" alt="Damar Batu">
+                <div class="product-info">
+                    <h3>Damar Batu</h3>
+                    <p>Damar Batu involves supplying and trading this natural resin,
+                       primarily used in incense (agarbatti), varnishes, inks, and crafts.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> PK STOP is a private service provider and not associated with EPFO or any government authority.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="stats">
+    <div class="container stats-grid">
+        <div><h2>1000+</h2><p>PF Cases Assisted</p></div>
+        <div><h2>99%</h2><p>Success Rate</p></div>
+        <div><h2>3+</h2><p>Years Experience</p></div>
+        <div><h2>24×7</h2><p>Support</p></div>
+    </div>
+</section>
+
+<br><br>
+
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <br><br>
+
+    <div class="testimonial-wrapper">
+        <div class="testimonial-track">
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>Very professional and reliable PF claim service. The process was smooth,
+                     well-guided, and completed on time. Highly recommended.</p>
+                <h4>Roshan Patil</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>PK STOP is the final solution for all your PF related issues whether
+                     it is withdrawal or transfer of your PF Excellent service</p>
+                <h4>Samson Sam</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>It was very good experience with PK- Stop. And This is Expert person for
+                     PF-EPFO Withdrawal and Also give Good Suggestions.
+                     I Would like to Suggest My friends. Thank.s a lot mr.
+                      PRAVESH YADAV For help and Support.. 😊 …</p>
+                <h4>Sant6 Sharma</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>I am very satisfied with the PF withdrawal service. The work was done quickly and efficiently,
+                     and I received my withdrawal on time. The charges were minimal and transparent.
+                      Highly recommended for anyone looking for a reliable and trustworthy service.</p>
+                <h4>Deepak Yadav</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>The best place for withdrawal of PF and you can get it done all system related work like Adharcard,pancard Kyc,
+                     government schemes related work deposit and withdrawal the money facility also available.The proprietor
+                      of PK Stop is very polite and he will act in a transparency manner and fast please visit atleast one time
+                       Thanks</p>
+                <h4>Brijesh Yadav</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>Amazing service good in pf withdrawal and all gives regular updates and also give good suggestions</p>
+                <h4>Tushar Sapkal</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <!--Duplicate same cards again-->
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>Very professional and reliable PF claim service. The process was smooth,
+                     well-guided, and completed on time. Highly recommended.</p>
+                <h4>Roshan Patil</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>PK STOP is the final solution for all your PF related issues whether
+                     it is withdrawal or transfer of your PF Excellent service</p>
+                <h4>Samson Sam</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>It was very good experience with PK- Stop. And This is Expert person for
+                     PF-EPFO Withdrawal and Also give Good Suggestions.
+                     I Would like to Suggest My friends. Thank.s a lot mr.
+                      PRAVESH YADAV For help and Support.. 😊 …</p>
+                <h4>Sant6 Sharma</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>I am very satisfied with the PF withdrawal service. The work was done quickly and efficiently,
+                     and I received my withdrawal on time. The charges were minimal and transparent.
+                      Highly recommended for anyone looking for a reliable and trustworthy service.</p>
+                <h4>Deepak Yadav</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>The best place for withdrawal of PF and you can get it done all system related work like Adharcard,pancard Kyc,
+                     government schemes related work deposit and withdrawal the money facility also available.The proprietor
+                      of PK Stop is very polite and he will act in a transparency manner and fast please visit atleast one time
+                       Thanks</p>
+                <h4>Brijesh Yadav</h4>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="testimonial-card">
+                ⭐⭐⭐⭐⭐  
+                <p>Amazing service good in pf withdrawal and all gives regular updates and also give good suggestions</p>
+                <h4>Tushar Sapkal</h4>
+                <span>Mumbai</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+
+<section class="contact ">
+  <h2>Contact Me</h2>
+  <p>Have a doubt about any service ? no need to worry i am here for you</p>
+
+  <!-- ================= CONTACT FORM ================= -->
+<form 
+  class="contact-form"
+  action="https://formspree.io/f/mrepovog"
+  method="POST">
+
+  <!-- User Name -->
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <!-- User Email -->
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <!-- Message -->
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <!-- Submit Button -->
+  <button type="submit">Send Message</button>
+</form>
+
+  <!-- WhatsApp Button -->
+  <a 
+    href="https://wa.me/8169883528" 
+    target="_blank" 
+    class="whatsapp-btn">
+    Chat on WhatsApp
+  </a>
+</section>
+
+    <section class="faq" id="faq">
+    <div class="container">
+        <h2>PF Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h4>How long does PF withdrawal take?</h4>
+            <p>PF withdrawal usually takes 7–15 working days after successful submission.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Is Aadhaar mandatory for PF withdrawal?</h4>
+            <p>Yes, Aadhaar linking with UAN is mandatory for online PF withdrawal.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What if my PF claim is rejected?</h4>
+            <p>We help identify errors and guide you through resubmission.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Is PK STOP a government service?</h4>
+            <p>No. PK STOP is a private service provider offering PF assistance.</p>
+        </div>
+    </div>
+    </section>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <div>
+            <h3>PK STOP</h3>
+            <p>Trusted PF & EPF service assistance platform.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="#about">About</a><br>
+            <a href="#services">Services</a><br>
+            <a href="#faq">FAQs</a>
+        </div>
+
+        <div>
+            <h4>Legal</h4>
+            <a href="privacy-policy.html">Privacy Policy</a><br>
+            <a href="terms.html">Terms & Conditions</a><br>
+            <a href="refund-policy.html">Refund Policy</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>📞 +918169883528 </p>
+            <p class="contact-item">
+            <img src="images/whatsapp-icon.jpeg" alt="WhatsApp" class="contact-icon">
+            <a href="https://wa.me/918169883528" target="_blank">
+            WhatsApp Support
+            </a>
+</p>
+
+            <p>📩 pkstopenterprises@gmail.com</p>
+            
+            <p class="contact-item">
+            <img src="images/instagram.jpeg" alt="instagram" class="icon">
+            <a href="https://www.instagram.com/pkstop0405?igsh=dTB2ZjQ3YTBlYTlm" target="_blank">Instagram</a>
+            </p>
+            
+
+        </div>
+
+
+    </div>
+
+    <section class="office-map">
+  <div class="container">
+    <h2>Visit Our Office</h2>
+    <br>
+    <p>Find PK STOP easily on Google Maps</p>
+
+    <div class="map-wrapper">
+       
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15080.297913075536!2d72.8984842557761!3d19.1043883224317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7da79b420af%3A0x4e2f63ddf7b42a28!2sPK%20STOP!5e0!3m2!1sen!2sin!4v1771865154624!5m2!1sen!2sin" 
+        width="400" height="250" style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+        
+    </div>
+  </div>
+</section>
+
+    <p class="footer-bottom">
+        © 2025 PK STOP. All Rights Reserved.
+    </p>
+</footer>
+
+</body>
+</html>
