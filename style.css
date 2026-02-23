@@ -1106,3 +1106,56 @@ button {
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(22, 163, 74, 0.45);
 }
+
+
+
+/* ===== OFFICE MAP SECTION ===== */
+
+.office-map {
+    padding: 60px 20px;
+    background: #0a2540;
+    text-align: center;
+}
+
+.office-map h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: white; /* PK STOP dark blue */
+}
+
+.office-map p {
+    margin-bottom: 25px;
+    color: white;
+}
+
+/* ===== SMALL PROFESSIONAL MAP ===== */
+
+.map-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 320px;   /* 👈 Smaller height */
+    border: 0;
+    display: block;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .map-wrapper iframe {
+        height: 350px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .map-wrapper iframe {
+        height: 220px;   /* 👈 Smaller for mobile */
+    }
+}
